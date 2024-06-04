@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import '../general/colors';
+
+$transition-time: .3s;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+body{
+    transition: all $transition-time ease;
+    background-color: $primary-color-light;
+    color: $accent-color-light;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 1080px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.site-mode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .mode{
+        margin-bottom: .4rem;
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: $accent-color-light;
+        .span-light{
+            font-weight: 900;
+        }
+        .span-dark{
+            font-weight: 400;
+        }
+        .span-light, .span-dark{
+            transition: font-weight $transition-time ease;
+        }
+    }
+}
+
+.information-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    background-color: $secondary-color-light;
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .main-info{
+            margin-bottom: 1rem;
+        }
+
+        h2{
+            font-size: 3.6rem;
+            font-weight:800;
+            line-height: 90%;
+        }
+        h3{
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 100%;
+        }
+        h4{
+            font-size: .6rem;
+            font-weight: 400;
+        }
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .details{
+        display: grid;
+        align-content: flex-end;
+        h5{
+            font-size: .8rem;
+            font-weight: 700;
+        }
+
+        div{
+            display: flex;
+            justify-content: space-between;
+            p{
+                font-size: .8rem;
+            }
+        }
+    }
+
+    .info-img{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        img{
+            max-width: 80%;
+        }
+    } 
+    
+}
+
+.input-field{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-bottom: 2rem;
+    input, button{
+        border-radius: 20px;
+        padding: .8rem 1rem;
+        font-size: .8rem;
+    }
+    
+    input{
+        margin-right: 1rem;
+        background-color: $secondary-color-light;
+        color: $accent-color-light;
+        border: none;
+        &:focus{
+            outline: none;
+        }
+    }
+
+    button{
+        background-color: $accent-color-light;
+        color: $primary-color-light;
+        font-weight:800 ;
+        cursor: pointer;
+        transition: all $transition-time ease;
+        border: 1px solid transparent;
+        &:hover{
+            background-color: $primary-color-light;
+            color: $accent-color-light;
+            border: 1px solid $accent-color-light;
+        }
+    }
+}
+
+.input-card{
+    margin-bottom: 2rem;
+}
+
+.daily h4{
+    margin-bottom: .6rem;
+}
+
+.week{
+    display: grid;
+    grid-template-columns: auto;
+
+    .card{
+        margin-bottom: 1rem;
+        background-color: $secondary-color-light;
+        padding: .8rem 1rem;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        *{
+            font-size: .6rem;
+        }
+
+        .left, .right{
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: .4rem;
+                width: 2.5rem;
+            }
+        }
+
+        .minmax{
+            color: $primary-color-light
+        }
+    }
+}
+
+.footer{
+    margin-top: auto;
+}
+
+
+
+// dark mode
+body.dark{
+    background-color: $primary-color-dark;
+    color: $accent-color-dark;
+
+    .site-mode button{
+        color: $accent-color-dark;
+        .span-light{
+            font-weight:400;
+        }
+        .span-dark{
+            font-weight: 900;
+        }
+    }
+
+    .information-card{
+        background-color: $secondary-color-dark;
+    }
+
+    .input-field{
+        input{
+            background-color: $secondary-color-dark;
+            color: $accent-color-dark;
+        }
+
+        button{
+            background-color: $accent-color-dark;
+            color: $primary-color-dark;
+
+            &:hover{
+                background-color: $primary-color-dark;
+                color: $accent-color-dark;
+                border: 1px solid $accent-color-dark;
+            }
+        }
+    }
+
+    .card{
+        background-color: $secondary-color-dark;
+        .minmax{
+            opacity: 0.5;
+        }
+    }
+}

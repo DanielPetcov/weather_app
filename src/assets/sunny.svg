@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 402.87 402.87">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #feda00;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="201.44" cy="201.44" r="83.25"/>
+  <g>
+    <ellipse class="cls-1" cx="201.44" cy="49" rx="17.5" ry="49"/>
+    <ellipse class="cls-1" cx="201.44" cy="353.87" rx="17.5" ry="49"/>
+  </g>
+  <g>
+    <ellipse class="cls-1" cx="49" cy="199.94" rx="49" ry="17.5"/>
+    <ellipse class="cls-1" cx="353.87" cy="199.94" rx="49" ry="17.5"/>
+  </g>
+  <g>
+    <ellipse class="cls-1" cx="93.65" cy="307.72" rx="49" ry="17.5" transform="translate(-190.17 156.35) rotate(-45)"/>
+    <ellipse class="cls-1" cx="309.22" cy="92.15" rx="49" ry="17.5" transform="translate(25.41 245.64) rotate(-45)"/>
+  </g>
+  <g>
+    <ellipse class="cls-1" cx="93.65" cy="92.15" rx="17.5" ry="49" transform="translate(-37.73 93.21) rotate(-45)"/>
+    <ellipse class="cls-1" cx="309.22" cy="307.72" rx="17.5" ry="49" transform="translate(-127.02 308.79) rotate(-45)"/>
+  </g>
+</svg>

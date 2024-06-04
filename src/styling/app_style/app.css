@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  transition: all 0.3s ease;
+  background-color: #F6F4EB;
+  color: #314C68;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1080px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.site-mode .mode {
+  margin-bottom: 0.4rem;
+}
+.site-mode button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #314C68;
+}
+.site-mode button .span-light {
+  font-weight: 900;
+}
+.site-mode button .span-dark {
+  font-weight: 400;
+}
+.site-mode button .span-light, .site-mode button .span-dark {
+  transition: font-weight 0.3s ease;
+}
+
+.information-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  border-radius: 25px;
+  margin-bottom: 1rem;
+  background-color: #AFD5E8;
+}
+.information-card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.information-card .info .main-info {
+  margin-bottom: 1rem;
+}
+.information-card .info h2 {
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 90%;
+}
+.information-card .info h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+.information-card .info h4 {
+  font-size: 0.6rem;
+  font-weight: 400;
+}
+.information-card .details {
+  display: grid;
+  align-content: flex-end;
+}
+.information-card .details h5 {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.information-card .details div {
+  display: flex;
+  justify-content: space-between;
+}
+.information-card .details div p {
+  font-size: 0.8rem;
+}
+.information-card .info-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.information-card .info-img img {
+  max-width: 80%;
+}
+
+.input-field {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin-bottom: 2rem;
+}
+.input-field input, .input-field button {
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  font-size: 0.8rem;
+}
+.input-field input {
+  margin-right: 1rem;
+  background-color: #AFD5E8;
+  color: #314C68;
+  border: none;
+}
+.input-field input:focus {
+  outline: none;
+}
+.input-field button {
+  background-color: #314C68;
+  color: #F6F4EB;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+.input-field button:hover {
+  background-color: #F6F4EB;
+  color: #314C68;
+  border: 1px solid #314C68;
+}
+
+.input-card {
+  margin-bottom: 2rem;
+}
+
+.daily h4 {
+  margin-bottom: 0.6rem;
+}
+
+.week {
+  display: grid;
+  grid-template-columns: auto;
+}
+.week .card {
+  margin-bottom: 1rem;
+  background-color: #AFD5E8;
+  padding: 0.8rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.week .card * {
+  font-size: 0.6rem;
+}
+.week .card .left, .week .card .right {
+  display: flex;
+  align-items: center;
+}
+.week .card .left img, .week .card .right img {
+  margin-right: 0.4rem;
+  width: 2.5rem;
+}
+.week .card .minmax {
+  color: #F6F4EB;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+body.dark {
+  background-color: #001523;
+  color: #F5EFED;
+}
+body.dark .site-mode button {
+  color: #F5EFED;
+}
+body.dark .site-mode button .span-light {
+  font-weight: 400;
+}
+body.dark .site-mode button .span-dark {
+  font-weight: 900;
+}
+body.dark .information-card {
+  background-color: #002945;
+}
+body.dark .input-field input {
+  background-color: #002945;
+  color: #F5EFED;
+}
+body.dark .input-field button {
+  background-color: #F5EFED;
+  color: #001523;
+}
+body.dark .input-field button:hover {
+  background-color: #001523;
+  color: #F5EFED;
+  border: 1px solid #F5EFED;
+}
+body.dark .card {
+  background-color: #002945;
+}
+body.dark .card .minmax {
+  opacity: 0.5;
+}/*# sourceMappingURL=app.css.map */
