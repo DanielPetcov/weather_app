@@ -14,8 +14,8 @@ function App() {
   const [mode, setMode] = useState("");
   const [changeMode, setChangeMode] = useState(false);
   const [inputText, setInputText] = useState("");
-  const [lat, setLat] = useState(51.509865);
-  const [lon, setLon] = useState(-0.118092);
+  const lat = 51.509865;
+  const lon = -0.118092;
 
   //data
   const [temperature, setTemperature] = useState(0);
@@ -131,33 +131,6 @@ function App() {
           setStorageDayObj([day1, day2, day3, day4, day5]);
     });
   }, [])
-  
-  // useEffect(() => {
-  //   fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=6a16a7449b57ca0b6da6f61da91ed05e`)
-  //   .then(result => result.json())
-  //   .then(result => {
-  //     if(result[0] === undefined) return;
-  //     setLat(result[0].lat);
-  //     setLon(result[0].lon)
-  //   })
-  //   .catch(error => console.log(error));
-
-  //   return;
-  // }, [location]);
-  
-  // useEffect(() => {
-  //   fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric `)
-  //   .then(result => result.json())
-  //   .then(data => {
-  //     setTemperature(data.main.temp);
-  //     setWeatherType(data.weather[0].main);
-  //     setFinalLocation(data.name);
-  //     setFeelsLike(data.main.feels_like);
-  //     setHumidity(data.main.humidity);
-  //     setWind(data.wind.speed);
-  //     setPressure(data.main.pressure);
-  //   })
-  // }, [lat, lon])
 
   useEffect(() => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${key}&units=metric`)
