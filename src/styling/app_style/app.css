@@ -163,6 +163,7 @@ body {
 }
 .week .card * {
   font-size: 0.6rem;
+  font-weight: 600;
 }
 .week .card .left, .week .card .right {
   display: flex;
@@ -173,7 +174,8 @@ body {
   width: 2.5rem;
 }
 .week .card .minmax {
-  color: #F6F4EB;
+  color: #314C68;
+  font-weight: 400;
 }
 
 .footer {
@@ -213,5 +215,7 @@ body.dark .card {
   background-color: #002945;
 }
 body.dark .card .minmax {
-  opacity: 0.5;
+  color: #F5EFED;
+  font-weight: 400;
+  opacity: 0.7;
 }/*# sourceMappingURL=app.css.map */

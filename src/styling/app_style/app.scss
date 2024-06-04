@@ -178,6 +178,7 @@ body{
         justify-content: space-between;
         *{
             font-size: .6rem;
+            font-weight:600;
         }
 
         .left, .right{
@@ -190,7 +191,8 @@ body{
         }
 
         .minmax{
-            color: $primary-color-light
+            color: $accent-color-light;
+            font-weight: 400;
         }
     }
 }
@@ -241,7 +243,9 @@ body.dark{
     .card{
         background-color: $secondary-color-dark;
         .minmax{
-            opacity: 0.5;
+            color: $accent-color-dark;
+            font-weight: 400;
+            opacity: .7;
         }
     }
 }
