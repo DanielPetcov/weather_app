@@ -98,6 +98,7 @@ function App() {
               if(e.dt_txt.indexOf(today_string) <= -1) return true;
               else return false;
           })
+          console.log(result);
           const day1: Day_OBJECT = {
             weather: result[5].weather[0].main,
             min: result[0].main.temp_min,
@@ -122,11 +123,26 @@ function App() {
             max: result[29].main.temp_max,
             id: 3
           }
-          const day5: Day_OBJECT = {
-            weather: result[37].weather[0].main,
-            min: result[32].main.temp_min,
-            max: result[37].main.temp_max,
+          let day5: Day_OBJECT = {
+            weather: result[result.length-1].weather[0].main,
+            min: result[result.length-1].main.temp_min,
+            max: result[result.length-1].main.temp_max,
             id: 4
+          }
+          if(result[37]){
+            day5 = {
+              weather: result[37].weather[0].main,
+              min: result[32].main.temp_min,
+              max: result[37].main.temp_max,
+              id: 4
+            }
+          } else {
+            day5 = {
+              weather: result[result.length-1].weather[0].main,
+              min: result[result.length-1].main.temp_min,
+              max: result[result.length-1].main.temp_max,
+              id: 4
+            }
           }
           setStorageDayObj([day1, day2, day3, day4, day5]);
     });
