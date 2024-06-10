@@ -27,7 +27,7 @@ function App() {
   const [humidity, setHumidity] = useState(0);
   const [wind, setWind] = useState(0);
   const [pressure, setPressure] = useState(0);
-  const key = '6a16a7449b57ca0b6da6f61da91ed05e';
+  const key = process.env.REACT_APP_WEATHER_APP_API;
 
   ////////////
   const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
